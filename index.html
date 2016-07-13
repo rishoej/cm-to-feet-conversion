@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<head>
+<title>Cm to feet converter</title>
+</head>
+<body>
+<h2>cm to feet converter</h2>
+
+<input type="text" id="cm" name="cm" onkeyup="cmToFeet()" value="0">
+<label for="cm">cm</label>
+<br><br>
+<input type="text" id="feet" name="feet" onkeyup="feetToCm()" value="0">
+<label for="feet">feet</label>	
+
+<script>
+var findCm = document.getElementById("cm");
+var findFeet = document.getElementById("feet");
+
+// cm to feet
+function cmToFeet() {
+	cm = findCm.value;
+	feet = cm * 0.032808399;
+	findFeet.value = feet;
+} 
+
+// feet to cm
+function feetToCm() {
+	feet = findFeet.value;
+	cm = feet * 30.48;
+	findCm.value = cm;
+} 
+</script>
+
+</body>
+</html>
