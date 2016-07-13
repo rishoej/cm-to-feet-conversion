@@ -1,4 +1,4 @@
-# cencimeter/feet conversion
+# Cencimeter/feet conversion
 A cencimeter(cm)/feet converter. Live calculation on input changes using Javascript.
 
 # Demo
