@@ -1,34 +1,54 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head>
-<title>Cm to feet converter</title>
+	<title>Cm to feet converter</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	.container{
+		text-align:center;
+	}
+	</style>
 </head>
 <body>
-<h2>cm to feet converter</h2>
+	<div class="container center">
+		<div class="col-md-12">
+		<h2>Cenctimetre to feet converter</h2>
+		<br>
+		<div class="form-inline">
+		  <div class="form-group">
+			<div class="input-group">
+			  <input type="text" class="form-control" id="cm" name="cm" onkeyup="cmToFeet()" value="0">
+			  <div class="input-group-addon">cm</div>
+			</div>
+		  </div>
+		  <div class="form-group">
+			<div class="input-group">
+			  <input type="text" class="form-control" id="feet" name="feet" onkeyup="feetToCm()" value="0">
+			  <div class="input-group-addon">feet</div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	<script>
+	var findCm = document.getElementById("cm");
+	var findFeet = document.getElementById("feet");
 
-<input type="text" id="cm" name="cm" onkeyup="cmToFeet()" value="0">
-<label for="cm">cm</label>
-<br><br>
-<input type="text" id="feet" name="feet" onkeyup="feetToCm()" value="0">
-<label for="feet">feet</label>	
+	// cm to feet
+	function cmToFeet() {
+		cm = findCm.value;
+		feet = cm * 0.032808399;
+		findFeet.value = feet;
+	} 
 
-<script>
-var findCm = document.getElementById("cm");
-var findFeet = document.getElementById("feet");
-
-// cm to feet
-function cmToFeet() {
-	cm = findCm.value;
-	feet = cm * 0.032808399;
-	findFeet.value = feet;
-} 
-
-// feet to cm
-function feetToCm() {
-	feet = findFeet.value;
-	cm = feet * 30.48;
-	findCm.value = cm;
-} 
-</script>
-
+	// feet to cm
+	function feetToCm() {
+		feet = findFeet.value;
+		cm = feet * 30.48;
+		findCm.value = cm;
+	} 
+	</script>
 </body>
 </html>
